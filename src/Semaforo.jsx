@@ -27,6 +27,7 @@ export const Semaforo = () => {
         className={`luz ${color === "green" ? "activa" : "inactiva"} verde`}
         onClick={() => handleLightClick()}
       ></div>
+      <div></div>
       <button onClick={handleLightClick}>Cambiar color</button>
     </div>
   );
