@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import './Semaforo.css';
 
 export const Semaforo = () => {
-  const [color, setColor] = useState("red"); // Inicializamos el estado con el color rojo
+  const [color, setColor] = useState(""); // Inicializamos el estado con el color rojo
   const [sequence, setSequence] = useState(["green","yellow","red"]); // Creamos un array con la secuencia de colores
   const [currentIndex, setCurrentIndex] = useState(0); // Creamos un índice para la secuencia de colores
 
   const handleLightClick = () => {
-    if (color=="red"){
+    if(color==""){
+      setColor("red");
+    }else if (color=="red"){
       setColor("green");
     }else if(color=="yellow"){
       setColor("red");
